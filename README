@@ -1,0 +1,46 @@
+The 'RestShop' service is implemented using the JDK 8. It is based on SpringBoot and Maven. For the rest module I'm
+using the JAX-RS, because it has nicer to use than the Spring REST library. For the persistence I'm using the Spring Data.
+
+To be 'production ready' the application is missing following things:
+- versioning of the rest interfaces
+- encryption of user names and passwords
+- security aspects like access right checking
+- more sophisticated error responses, with error codes etc.
+
+
+
+
+1) Build and create of Fat JAR:
+mvn clean package spring-boot:repackage
+
+
+
+2) Start the application
+java -jar application/target/application-exec.jar
+
+
+
+3) Execute REST calls:
+
+curl --verbose http://localhost:8093/api/product
+
+curl --verbose \
+    --header "Content-Type: application/json" \
+    --request POST \
+    --data '{"sku":"weroirie848434dfd", "name":"Meat","price":"450"}' \
+    http://localhost:8093/api/product
+
+
+curl --verbose \
+    --header "Content-Type: application/json" \
+    --request PUT \
+    --data '{"sku":"weroirie848434dfd", "name":"Meat","price":"820"}' \
+    http://localhost:8093/api/product
+
+
+
+curl --verbose \
+    --header "Content-Type: application/json" \
+    --request DELETE \
+    --data '{"sku":"weroirie848434dfd", "name":"Meat","price":"820"}' \
+    http://localhost:8093/api/product

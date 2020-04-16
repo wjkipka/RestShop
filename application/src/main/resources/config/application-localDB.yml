@@ -1,0 +1,21 @@
+server:
+  port: 8093
+spring:
+  jackson:
+    default-property-inclusion: NON_NULL
+  jersey:
+    application-path: /api
+  datasource:
+    url: jdbc:mysql://host.docker.internal:3406/restshop
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    username: dbuser
+    password: dbpassword
+    tomcat:
+      max-active: 10 # Maximum number of active connections that can be allocated from this pool at the same time
+      max-wait: 1000  # Number of ms to wait before throwing an exception if no connection is available.
+      test-on-borrow: true  # Validate the connection before borrowing it from the pool.
+  jpa:
+    hibernate:
+      ddl-auto: none
+  main:
+    allow-bean-definition-overriding: true

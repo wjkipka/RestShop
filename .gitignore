@@ -1,0 +1,18 @@
+# ignore IntelliJ Idea files
+.idea
+
+# ignore H2 database file
+*.db
+
+# ignore target
+*/target/**
+target/**
+
+# ignore iml files
+*.iml
+
+# ignore db_data
+docker/mysql/db_data/
+
+# ignore logs
+logs/
