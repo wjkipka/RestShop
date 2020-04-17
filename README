@@ -39,3 +39,9 @@ curl --verbose \
     --request DELETE \
     --data '{"sku":"weroirie848434dfd", "name":"Meat","price":"820"}' \
     http://localhost:8093/api/product
+
+
+
+
+4) Alternatively use Swagger UI to execute the REST calls.
+http://localhost:8093/swagger-ui/index.html

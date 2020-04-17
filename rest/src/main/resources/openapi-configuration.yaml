@@ -1,0 +1,15 @@
+resourcePackages:
+  - com.roche.application.rest
+prettyPrint: true
+cacheTTL: 0
+openAPI:
+  info:
+    version: '1.0.0-0'
+    title: ROCHE-Shop-REST-API
+    description: 'ROCHE Shop REST API'
+    contact:
+      email: waldemar@kipka.net
+  servers:
+    - url: http://localhost:8093/api
+      description: Local server
+  components:
