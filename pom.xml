@@ -26,7 +26,7 @@
         <slf4j.version>2.13.1</slf4j.version>
         <swagger.version>2.0.7</swagger.version>
         <tomcat.jdbc.version>9.0.17</tomcat.jdbc.version>
-        <h2.version>1.4.199</h2.version>
+        <h2.version>2.1.210</h2.version>
         <mysql.version>8.0.15</mysql.version>
         <junit-upiter.version>5.6.2</junit-upiter.version>
         <version.surefire.plugin>3.0.0-M4</version.surefire.plugin>
